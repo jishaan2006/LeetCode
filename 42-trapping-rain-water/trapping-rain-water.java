@@ -15,12 +15,7 @@ class Solution {
         int max=0;
 
         for(int i=0;i<n;i++){
-            int len;
-            if(left[i]>right[i]){
-                len=right[i];
-            }else {
-                len=left[i];
-            }
+            int len=Math.min(left[i],right[i]);
             max=max+(len-height[i]);
         }
         return max;
