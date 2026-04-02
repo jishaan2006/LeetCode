@@ -6,9 +6,7 @@ class Solution {
         while(l<r){
             int curr;
             curr=Math.min(height[l],height[r])*(r-l);
-            if(curr>maxWater){
-                maxWater=curr;
-            }
+            maxWater=Math.max(curr,maxWater);
             if(height[l]<height[r]){
                 l++;
             }
