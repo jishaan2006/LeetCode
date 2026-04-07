@@ -1,13 +1,9 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int c=0;
-        HashSet<Integer> set=new HashSet<>();
-        for(int i=0;i<nums.length;i++){
-            if(set.contains(nums[i])){
-
-            }else{
-                set.add(nums[i]);
-                nums[c]=nums[i];
+        int c=1;
+        for(int i=1;i<nums.length;i++){
+            if (nums[i] != nums[i - 1]) {
+                nums[c] = nums[i];
                 c++;
             }
         }
