@@ -6,13 +6,10 @@ class Solution {
                 count++;
             }
         }
-        if(count==0){
-            return true;
-        } else if (count==word.length()) {
-            return true;
-        } else if (count==1 && Character.isUpperCase(word.charAt(0))) {
-            return true;
-        }
+        if(word.length() == count){ return true;}
+        if(count == 0){ return true;}
+        if( (count == 1) && (word.charAt(0)>='A' && word.charAt(0)<='Z')  ){ return true; }
+
         return false;
     }
 }
