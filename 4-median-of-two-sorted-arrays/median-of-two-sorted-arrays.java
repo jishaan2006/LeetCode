@@ -11,11 +11,6 @@ class Solution {
                 arr[i]=nums2[k++];
             }
         }
-        if(n%2==0){
-            return (arr[n/2]+arr[n/2-1])/2.0;
-        }
-        else{
-            return arr[n/2];
-        }
+        return (n%2==0) ? (arr[n/2]+arr[n/2-1])/2.0 : arr[n/2];
     }
 }
